@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>percentage </title>
+<script type="text/javascript">
+function phesady(){
+	var phesady_of_marks=0;
+	var c=0;
+	var index = 0;
+	var subjects_marks = new Array(index);
+	var sName = new Array(index);
+	var j=1;
+	var n = prompt("د مضامینو تعداد");	
+	var n1 = parseInt(n);
+	
+	for(i=0;i<n1;i++)
+	{
+	
+	 var sn = prompt(" د مضمون نوم"+j+"په انګلیسسی داخل کړی "); 
+	 sName[index] = sn;	 
+	 var sbj = prompt("  د مضمون نمره "+sName[i]+" په انګلیسی راکړی");
+	 var crd = prompt("  د مضمون د کریډیټونو شمیر "+sName[i]+" داخل کړی ");
+	 var _sbj = parseInt(sbj);
+	 var _crd = parseInt(crd);
+	 var result = _sbj*_crd;
+	 subjects_marks[index] = result; 
+	 
+	 c = c+_crd;
+	 index++;
+	 j++;
+	 
+	}
+		
+		for(i=0;i<n1;i++)
+		{ 
+		  var sum = subjects_marks[i];
+		  phesady_of_marks = phesady_of_marks+sum/c;
+		  document.write(sName[i] +"="+ subjects_marks[i]+ "<br>");
+		}
+		if(phesady_of_marks >= 75 && phesady_of_marks <= 100)
+		{
+		  document.write("Congrate Your Parsentage is Greate!! "+ phesady_of_marks+"<br>");
+		}
+		else if(phesady_of_marks < 75 && phesady_of_marks>=65) 
+		{
+		  document.write("Congrate Your Parsentage is Good!! "+ phesady_of_marks+"<br>");
+		}
+		else if(phesady_of_marks < 65 && phesady_of_marks>=55 ) 
+		{
+		  document.write("You Passed but your Percentage is not Good!! "+ phesady_of_marks+"<br>");
+		}
+		else if(phesady_of_marks < 55 ) 
+		{
+		  document.write("You Are Failed!! "+ phesady_of_marks+"<br>");
+		}
+		else{
+		document.write("Inccorect Percentage "+ phesady_of_marks);
+		}
+		document.write(" number of your cridit");
+		document.write(c);
+}
+function setBackground(){
+	var r = Math.round((Math.random()*1000)) % 255;
+	var g = Math.round((Math.random()*1000)) % 255;
+	var b = Math.round((Math.random()*1000)) % 255;
+	
+	document.getElementById("page").style.color = "rgb("+ r + "," + g +","+ b + ")";
+	
+	}
+
+	window.setInterval(setBackground,500);
+	
+	function setBackground1(){
+	var r = Math.round((Math.random()*1000)) % 255;
+	var g = Math.round((Math.random()*1000)) % 255;
+	var b = Math.round((Math.random()*1000)) % 255;
+
+	document.getElementById("one").style.outlineColor = "rgb("+ r + "," + g +","+ b + ")";
+	document.getElementById("two").style.borderColor = "rgb("+ r + "," + g +","+ b + ")";
+	}
+	window.setInterval(setBackground1,800);
+</script>
+<style type="text/css">
+div#one{
+	background:lightgray;
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	border:10px solid #956;
+	outline:25px dashed #00B;
+	margin-top:30px;
+}
+input{
+	background-color:lightblue;
+	padding:20px;
+	outline:2px dotted blue;
+	margin-top:20px;
+	width:30%;
+	font-size:50px;
+	color:blue;
+}
+div#two{
+	width:40%;
+	align:left;
+	border:10px dotted yellow;
+	background-color:gray;
+	border-top-left-radius:50px;
+	border-bottom-right-radius:40px;
+	
+	
+}
+div#two p{
+	text-align:right;
+	direction:rtl;
+	padding-right:5px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div align="center" id="one" height="900px">
+<h1 id="page" style="font-size:70px;">Welcome Guys Find Your Parsentage</h1>
+
+<div id="two" height="550px" >
+<h2>راهنمایی<h/2>
+<p >
+۱- کلیک وکړی د more په بټنه<br>
+۲- د خپلو مضامینو تعداد وارد کړی<br>
+۳- د اول مضمون نوم وارد کړی<br>
+۴- ددی مضمون نمره وارد کړی<br>
+۵- د اول مضمون د کریډټونو شمیر وارد کړی<br>
+۶- تر اخره همداسی ادمه ورکړی<br>
+</p>
+</div>
+
+<input type="button" value="More..." onclick="phesady();">
+<div>
+<div type="one" >
+<div id="four" style="border:2px dashed green;font-family:italic; padding-bottom:4px;color:blue;padding-top:6px;">
+<h3>Was Create By Mohammadullah Mohammadi</h4>
+</div>
+</div>
+</body>
+</html>
